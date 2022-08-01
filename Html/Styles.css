@@ -199,6 +199,35 @@ body {
 	text-decoration: none;
 }
 /* Seasons grid on seasons page*/
-.grid {
+/*.season-s {
+	margin: 30px;
+}
+.season-title {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: #333;
+	margin-bottom: 15px;
+}
+
+.season-image {
+	height: 220px;
+}
+
+.season-deatails {
+	display: flex;
+	align-items: center;
+	padding: 5px;
+}
+.season-btn-listen {
+	display: flex;
+	align-items: center;
+	padding: 5px;
 	text-decoration: none;
 }
+
+.season-item {
+	margin: 30px;
+}*/
