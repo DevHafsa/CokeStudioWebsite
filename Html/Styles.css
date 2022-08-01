@@ -173,6 +173,28 @@ body {
 	max-width: 19%;
 }
 
+.song-link {
+	text-decoration: none;
+}
+
+.listen-btn {
+	margin: 10px auto;
+	border: 1px solid rgb(26, 6, 6);
+	background: brown;
+	color: #fff;
+	font-size: 16px;
+	line-height: 20px;
+	padding: 14px 20px;
+	border-radius: 10px;
+	transition: all 200ms ease;
+	box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+
+.listen-btn:hover {
+	background: rgb(117, 29, 29);
+	color: white;
+	border: 1px solid rgb(26, 6, 6);
+}
 .link {
 	text-decoration: none;
 }
