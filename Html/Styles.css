@@ -198,7 +198,45 @@ body {
 .link {
 	text-decoration: none;
 }
-/* Seasons grid on seasons page*/
+
+/* seasons page styling */
+.season-item {
+	margin: 30px;
+}
+
+.season-item-title {
+	display: block;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: #333;
+	margin-bottom: 15px;
+}
+
+.season-item-img {
+	width: 300px;
+	height: 157px;
+}
+
+.season-item-deatails {
+	display: flex;
+	align-items: center;
+	padding: 5px;
+}
+
+.season-item-line {
+	flex-grow: 1;
+	color: #333;
+}
+
+.season-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+
+/* Merch page styling */
 
 .merch-item {
 	margin: 30px;
