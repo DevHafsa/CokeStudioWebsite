@@ -219,6 +219,11 @@ body {
 	height: 157px;
 }
 
+.season-item-img-two {
+	width: 260px;
+	height: 190px;
+}
+
 .season-item-deatails {
 	display: flex;
 	align-items: center;
@@ -227,7 +232,8 @@ body {
 
 .season-item-line {
 	flex-grow: 1;
-	color: #333;
+	color: rgb(0, 0, 0);
+	font-weight: bold;
 }
 
 .season-items {
