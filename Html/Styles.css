@@ -275,7 +275,14 @@ body {
 
 .merch-item-price {
 	flex-grow: 1;
-	color: #333;
+	color: rgb(0, 0, 0);
+}
+
+.merch-price {
+	margin-right: 50px;
+}
+.merch-price-two {
+	margin-right: 125px;
 }
 
 .merch-items {
