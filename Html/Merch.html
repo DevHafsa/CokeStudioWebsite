@@ -2,155 +2,158 @@
 <html>
 	<head>
 		<title>Coke Studio</title>
-		<meta name="description" content="This is the descrition" />
+		<meta name="description" content="A website about Coke Studio" />
 		<link rel="stylesheet" href="Styles.css" />
 		<script src="merch.js" async></script>
 	</head>
 	<body>
-		This is my first webpage
+		<header class="main-header">
+			<!-- Navigation Menu -->
+			<nav class="nav main-nav">
+				<ul>
+					<li><a href="Index.html">HOME</a></li>
+					<li><a href="About.html">ABOUT</a></li>
+					<li><a href="Seasons.html">SEASONS</a></li>
+					<li><a href="Merch.html">MERCH</a></li>
+				</ul>
+			</nav>
+			<h1 class="band-name band-name-large">Coke Studio</h1>
+		</header>
+		<!--Merch items add to cart-->
+		<section class="content-section container">
+			<h2 class="section-header">Merch</h2>
+			<div class="merch-items">
+				<div class="merch-item">
+					<span class="merch-item-title">T-Shirt(gray)</span>
+					<img src="images/Merch1.jpg" class="merch-item-img" />
+					<div class="merch-item-details">
+						<span class="merch-item-price merch-price">$16.49</span>
+						<button class="btn listen-btn shop-item-btn" type="button">
+							ADD TO CART
+						</button>
+					</div>
+				</div>
+				<div class="merch-item">
+					<div>
+						<span class="merch-item-title">Full Sleve Shirt</span>
+					</div>
+					<img src="images/Merch2.jpg" class="merch-item-img" />
+					<div class="merch-item-details">
+						<span class="merch-item-price merch-price">$17.83</span>
+						<button class="btn listen-btn shop-item-btn" type="button">
+							ADD TO CART
+						</button>
+					</div>
+				</div>
+				<div class="merch-item">
+					<div>
+						<span class="merch-item-title">T-shirt(Black)</span>
+					</div>
+					<img src="images/Merch3.jpg" class="merch-item-img" />
+					<div class="merch-item-details">
+						<span class="merch-item-price merch-price">$15.24</span>
+						<button class="btn listen-btn shop-item-btn" type="button">
+							ADD TO CART
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="content-section container">
+			<h2 class="section-header">Posters</h2>
+			<div class="merch-items">
+				<div class="merch-item">
+					<div>
+						<span class="merch-item-title">Pasoori</span>
+					</div>
+					<img src="images/Poster1.jpg" class="merch-img" />
+					<div class="merch-item-details">
+						<span class="merch-item-price merch-price-two">$15.32</span>
+						<button class="btn listen-btn shop-item-btn" type="button">
+							ADD TO CART
+						</button>
+					</div>
+				</div>
+				<div class="merch-item">
+					<div>
+						<span class="merch-item-title">Peechay Hutt</span>
+					</div>
+					<img src="images/PeechayHutt.jpg" class="merch-img" />
+					<div class="merch-item-details">
+						<span class="merch-item-price merch-price-two">$13.51</span>
+						<button class="btn listen-btn shop-item-btn" type="button">
+							ADD TO CART
+						</button>
+					</div>
+				</div>
+				<div class="merch-item">
+					<div>
+						<span class="merch-item-title">Sajan Das Na</span>
+					</div>
+					<img src="images/Poster2.jpg" class="merch-img" />
+					<div class="merch-item-details">
+						<span class="merch-item-price merch-price-two">$14.94</span>
+						<button class="btn listen-btn shop-item-btn" type="button">
+							ADD TO CART
+						</button>
+					</div>
+				</div>
+				<div class="merch-item">
+					<div>
+						<span class="merch-item-title">Tu Jhoom</span>
+					</div>
+					<img src="images/Poster3.jpg" class="merch-img" />
+					<div class="merch-item-details">
+						<span class="merch-item-price merch-price-two">$12.17</span>
+						<button class="btn listen-btn shop-item-btn" type="button">
+							ADD TO CART
+						</button>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!--Checkout for items-->
+		<section class="content-section container">
+			<h2 class="section-header">CART</h2>
+			<div class="cart-row">
+				<span class="cart-item cart-header cart-column">Item</span>
+				<span class="cart-price cart-header cart-column">Price</span>
+				<span class="cart-quantity cart-header cart-column">Quantity</span>
+			</div>
+			<div class="cart-items"></div>
+			<div class="cart-total">
+				<span class="cart-total-title">Total</span>
+				<span class="cart-total-price">$0</span>
+			</div>
+			<div>
+				<button class="btn-purchase listen-btn" type="button">Buy</button>
+			</div>
+		</section>
+		<!--Social links-->
+		<footer class="main-footer">
+			<div class="container main-footer-container">
+				<h3 class="band-name">Coke Studio</h3>
+				<ul class="nav footer-nav">
+					<li>
+						<a href="https://www.youtube.com/c/cokestudio" target="_blank">
+							<img src="images/youtubeeeeee.png" />
+						</a>
+					</li>
+					<li>
+						<a
+							href="https://open.spotify.com/user/valwme5314xxyiezjz4nztbvd"
+							target="_blank"
+						>
+							<img src="images/3spotify.png" />
+						</a>
+					</li>
+					<li>
+						<a href="https://www.facebook.com/cokestudio/" target="_blank">
+							<img src="images/3facebook.png" />
+						</a>
+					</li>
+				</ul>
+			</div>
+		</footer>
 	</body>
-	<header class="main-header">
-		<nav class="nav main-nav">
-			<ul>
-				<li><a href="Index.html">HOME</a></li>
-				<li><a href="About.html">ABOUT</a></li>
-				<li><a href="Seasons.html">SEASONS</a></li>
-				<li><a href="Merch.html">MERCH</a></li>
-			</ul>
-		</nav>
-		<h1 class="band-name band-name-large">Coke Studio</h1>
-	</header>
-	<section class="content-section container">
-		<h2 class="section-header">Merch</h2>
-		<div class="merch-items">
-			<div class="merch-item">
-				<span class="merch-item-title">T-Shirt(gray)</span>
-				<img src="images/Merch1.jpg" class="merch-item-img" />
-				<div class="merch-item-details">
-					<span class="merch-item-price merch-price">$16.49</span>
-					<button class="btn listen-btn shop-item-btn" type="button">
-						ADD TO CART
-					</button>
-				</div>
-			</div>
-			<div class="merch-item">
-				<div>
-					<span class="merch-item-title">Full Sleve Shirt</span>
-				</div>
-				<img src="images/Merch2.jpg" class="merch-item-img" />
-				<div class="merch-item-details">
-					<span class="merch-item-price merch-price">$17.83</span>
-					<button class="btn listen-btn shop-item-btn" type="button">
-						ADD TO CART
-					</button>
-				</div>
-			</div>
-			<div class="merch-item">
-				<div>
-					<span class="merch-item-title">T-shirt(Black)</span>
-				</div>
-				<img src="images/Merch3.jpg" class="merch-item-img" />
-				<div class="merch-item-details">
-					<span class="merch-item-price merch-price">$15.24</span>
-					<button class="btn listen-btn shop-item-btn" type="button">
-						ADD TO CART
-					</button>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="content-section container">
-		<h2 class="section-header">Posters</h2>
-		<div class="merch-items">
-			<div class="merch-item">
-				<div>
-					<span class="merch-item-title">Pasoori</span>
-				</div>
-				<img src="images/Poster1.jpg" class="merch-img" />
-				<div class="merch-item-details">
-					<span class="merch-item-price merch-price-two">$15.32</span>
-					<button class="btn listen-btn shop-item-btn" type="button">
-						ADD TO CART
-					</button>
-				</div>
-			</div>
-			<div class="merch-item">
-				<div>
-					<span class="merch-item-title">Peechay Hutt</span>
-				</div>
-				<img src="images/PeechayHutt.jpg" class="merch-img" />
-				<div class="merch-item-details">
-					<span class="merch-item-price merch-price-two">$13.51</span>
-					<button class="btn listen-btn shop-item-btn" type="button">
-						ADD TO CART
-					</button>
-				</div>
-			</div>
-			<div class="merch-item">
-				<div>
-					<span class="merch-item-title">Sajan Das Na</span>
-				</div>
-				<img src="images/Poster2.jpg" class="merch-img" />
-				<div class="merch-item-details">
-					<span class="merch-item-price merch-price-two">$14.94</span>
-					<button class="btn listen-btn shop-item-btn" type="button">
-						ADD TO CART
-					</button>
-				</div>
-			</div>
-			<div class="merch-item">
-				<div>
-					<span class="merch-item-title">Tu Jhoom</span>
-				</div>
-				<img src="images/Poster3.jpg" class="merch-img" />
-				<div class="merch-item-details">
-					<span class="merch-item-price merch-price-two">$12.17</span>
-					<button class="btn listen-btn shop-item-btn" type="button">
-						ADD TO CART
-					</button>
-				</div>
-			</div>
-		</div>
-	</section>
-	<section class="content-section container">
-		<h2 class="section-header">CART</h2>
-		<div class="cart-row">
-			<span class="cart-item cart-header cart-column">Item</span>
-			<span class="cart-price cart-header cart-column">Price</span>
-			<span class="cart-quantity cart-header cart-column">Quantity</span>
-		</div>
-		<div class="cart-items"></div>
-		<div class="cart-total">
-			<span class="cart-total-title">Total</span>
-			<span class="cart-total-price">$0</span>
-		</div>
-		<div>
-			<button class="btn-purchase listen-btn" type="button">Buy</button>
-		</div>
-	</section>
-	<footer class="main-footer">
-		<div class="container main-footer-container">
-			<h3 class="band-name">Coke Studio</h3>
-			<ul class="nav footer-nav">
-				<li>
-					<a href="https://www.youtube.com/c/cokestudio" target="_blank">
-						<img src="images/youtubeeeeee.png" />
-					</a>
-				</li>
-				<li>
-					<a
-						href="https://open.spotify.com/user/valwme5314xxyiezjz4nztbvd"
-						target="_blank"
-					>
-						<img src="images/3spotify.png" />
-					</a>
-				</li>
-				<li>
-					<a href="https://www.facebook.com/cokestudio/" target="_blank">
-						<img src="images/3facebook.png" />
-					</a>
-				</li>
-			</ul>
-		</div>
-	</footer>
 </html>

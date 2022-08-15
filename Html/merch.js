@@ -3,7 +3,7 @@ if (document.readyState == "loading") {
 } else {
 	ready();
 }
-
+/*For each function to make sure they are ready also to get the elements I used by there class name*/
 function ready() {
 	var removeCartIconButton = document.getElementsByClassName("btn-danger");
 	console.log(removeCartIconButton);
@@ -33,7 +33,7 @@ function ready() {
 		.getElementsByClassName("btn-purchase")[0]
 		.addEventListener("click", purchaseClicked);
 }
-
+/* Code for the Buy button to make sure it works */
 function purchaseClicked() {
 	alert("Thank you for your purchase");
 	var cartItems = document.getElementsByClassName("cart-items")[0];
@@ -42,6 +42,7 @@ function purchaseClicked() {
 	}
 	updateCartTotal();
 }
+/*code for to remove an item and the price changing accourding to that */
 function removeCartItem(event) {
 	var buttonClicked = event.target;
 	buttonClicked.parentElement.parentElement.remove();
@@ -55,7 +56,7 @@ function quantityChanged(event) {
 	}
 	updateCartTotal();
 }
-
+/*Cod forn adding items to cart */
 function addToCartClicked(event) {
 	var button = event.target;
 	var merchItem = button.parentElement.parentElement;
@@ -145,7 +146,7 @@ function addItemToCarts(name, cost, imgSrc) {
 		.getElementsByClassName("cart-quantity-input")[0]
 		.addEventListener("change", quantityChanged);
 }
-
+/*Code for the update of price when the quantity goes up or down also changes when you add an item*/
 function updateCartTotal() {
 	var cartItemContainer = document.getElementsByClassName("cart-items")[0];
 	var cartRows = cartItemContainer.getElementsByClassName("cart-row");
