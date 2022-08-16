@@ -151,6 +151,15 @@ body {
 	margin-bottom: 1em;
 }
 
+.artist-pics {
+	display: block;
+	height: 80px;
+	width: 70px;
+	float: left;
+	margin-right: 10px;
+	border-radius: 10%;
+}
+
 .artist-item {
 	display: inline-block;
 	padding-right: 0.5em;
@@ -167,11 +176,11 @@ body {
 }
 
 .song-name {
-	width: 42%;
+	width: 32%;
 }
 
 .song-btn {
-	max-width: 19%;
+	max-width: 17%;
 }
 
 .song-link {
@@ -200,6 +209,11 @@ body {
 	text-decoration: none;
 }
 
+.alingn-btn {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 10px 0;
+}
 /* seasons page styling */
 .season-item {
 	margin: 30px;

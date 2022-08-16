@@ -56,20 +56,18 @@ function quantityChanged(event) {
 	}
 	updateCartTotal();
 }
-/*Cod forn adding items to cart */
+/*Code for adding items to cart */
 function addToCartClicked(event) {
 	var button = event.target;
 	var merchItem = button.parentElement.parentElement;
 	var title = merchItem.getElementsByClassName("merch-item-title")[0].innerText;
 	var price = merchItem.getElementsByClassName("merch-item-price")[0].innerText;
 	var imageSrc = merchItem.getElementsByClassName("merch-item-img")[0].src;
-	console.log(title, price, imageSrc);
 	addItemToCart(title, price, imageSrc);
 	updateCartTotal();
 }
 
 function addItemToCart(title, price, imageSrc) {
-	console.log(`title ${title} price ${price} imageSrc ${imageSrc}`);
 	var cartRow = document.createElement("div");
 	cartRow.classList.add("cart-row");
 	var cartItems = document.getElementsByClassName("cart-items")[0];
@@ -92,7 +90,6 @@ function addItemToCart(title, price, imageSrc) {
     <button class="btn btn-danger" type="button">Remove</button>
 </div>`;
 	cartRow.innerHTML = cartRowContents;
-	console.log(cartRow);
 	cartItems.append(cartRow);
 	cartRow
 		.getElementsByClassName("btn-danger")[0]
@@ -108,13 +105,11 @@ function addToCartClickeds(event) {
 	var name = merchItem.getElementsByClassName("merch-item-title")[0].innerText;
 	var cost = merchItem.getElementsByClassName("merch-item-price")[0].innerText;
 	var imgSrc = merchItem.getElementsByClassName("merch-img")[0].src;
-	console.log(name, cost, imgSrc);
 	addItemToCarts(name, cost, imgSrc);
 	updateCartTotal();
 }
 
 function addItemToCarts(name, cost, imgSrc) {
-	console.log(`name ${name} cost ${cost} imgSrc ${imgSrc}`);
 	var cartRow = document.createElement("div");
 	cartRow.classList.add("cart-row");
 	var cartItems = document.getElementsByClassName("cart-items")[0];
@@ -137,7 +132,6 @@ function addItemToCarts(name, cost, imgSrc) {
     <button class="btn btn-danger" type="button">Remove</button>
 </div>`;
 	cartRow.innerHTML = cartRowContents;
-	console.log(cartRow);
 	cartItems.append(cartRow);
 	cartRow
 		.getElementsByClassName("btn-danger")[0]
