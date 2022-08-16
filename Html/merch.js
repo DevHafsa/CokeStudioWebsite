@@ -120,7 +120,7 @@ function addItemToCarts(name, cost, imgSrc) {
 	var cartItems = document.getElementsByClassName("cart-items")[0];
 	var cartItemNames = cartItems.getElementsByClassName("cart-item-title");
 	for (var i = 0; i < cartItemNames.length; i++) {
-		if (cartItemNames[i].innerText == title) {
+		if (cartItemNames[i].innerText == name) {
 			alert("This item is already added to the cart");
 			return;
 		}
