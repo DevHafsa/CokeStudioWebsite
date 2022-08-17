@@ -1,10 +1,11 @@
 if (document.readyState == "loading") {
-	document.addEventListener("DOMContentLoaded", ready);
+	document.addEventListener("DOMContentLoaded", initialize);
 } else {
-	ready();
+	initialize();
 }
-/*For each function to make sure they are ready also to get the elements I used by there class name*/
-function ready() {
+
+// Grab all the html elements once the document's content has been loaded
+function initialize() {
 	var removeCartIconButton = document.getElementsByClassName("btn-danger");
 	for (var i = 0; i < removeCartIconButton.length; i++) {
 		var button = removeCartIconButton[i];
@@ -26,7 +27,8 @@ function ready() {
 		.getElementsByClassName("btn-purchase")[0]
 		.addEventListener("click", purchaseClicked);
 }
-/* clear out cart after purchase is made */
+
+// clear out cart after purchase is made
 function purchaseClicked() {
 	alert("Thank you for your purchase");
 	var cartItems = document.getElementsByClassName("cart-items")[0];
@@ -35,13 +37,15 @@ function purchaseClicked() {
 	}
 	updateCartTotal();
 }
-/*remove an item and the price changing accourding to that */
+
+// remove an item from the cart and deduct item price from total price
 function removeCartItem(event) {
 	var buttonClicked = event.target;
 	buttonClicked.parentElement.parentElement.remove();
 	updateCartTotal();
 }
 
+// increment quantity to 1 when an item is added to the cart
 function quantityChanged(event) {
 	var input = event.target;
 	if (isNaN(input.value) || input.value <= 0) {
@@ -49,7 +53,8 @@ function quantityChanged(event) {
 	}
 	updateCartTotal();
 }
-/*add items to cart */
+
+// grab all the cart html elements when the item is added to the cart
 function addToCartClicked(event) {
 	var button = event.target;
 	var merchItem = button.parentElement.parentElement;
@@ -60,6 +65,7 @@ function addToCartClicked(event) {
 	updateCartTotal();
 }
 
+// add the item to the cart
 function addItemToCart(title, price, imageSrc) {
 	var cartRow = document.createElement("div");
 	cartRow.classList.add("cart-row");
@@ -72,16 +78,16 @@ function addItemToCart(title, price, imageSrc) {
 		}
 	}
 	var cartRowContents = `
-    <div class="cart-item cart-column">
-		<img class="cart-item-img" src="${imageSrc}" width="103"
-		height="100" />
-		<span class="cart-item-title">${title}</span>
-</div>
-<span class="cart-price cart-column">${price}</span>
-<div class="cart-quantity cart-column">
-    <input class="cart-quantity-input" type="number" value="1" />
-    <button class="btn btn-danger" type="button">Remove</button>
-</div>`;
+		<div class="cart-item cart-column">
+			<img class="cart-item-img" src="${imageSrc}" width="103"
+			height="100" />
+			<span class="cart-item-title">${title}</span>
+		</div>
+		<span class="cart-price cart-column">${price}</span>
+		<div class="cart-quantity cart-column">
+			<input class="cart-quantity-input" type="number" value="1" />
+			<button class="btn btn-danger" type="button">Remove</button>
+		</div>`;
 	cartRow.innerHTML = cartRowContents;
 	cartItems.append(cartRow);
 	cartRow
@@ -92,7 +98,7 @@ function addItemToCart(title, price, imageSrc) {
 		.addEventListener("change", quantityChanged);
 }
 
-/*Code for the update of price when the quantity goes up or down also changes when you add an item*/
+// update the cart total price when the quantity is increased or decreased
 function updateCartTotal() {
 	var cartItemContainer = document.getElementsByClassName("cart-items")[0];
 	var cartRows = cartItemContainer.getElementsByClassName("cart-row");
