@@ -6,7 +6,6 @@ if (document.readyState == "loading") {
 /*For each function to make sure they are ready also to get the elements I used by there class name*/
 function ready() {
 	var removeCartIconButton = document.getElementsByClassName("btn-danger");
-	console.log(removeCartIconButton);
 	for (var i = 0; i < removeCartIconButton.length; i++) {
 		var button = removeCartIconButton[i];
 		button.addEventListener("click", removeCartItem);
@@ -23,17 +22,11 @@ function ready() {
 		button.addEventListener("click", addToCartClicked);
 	}
 
-	var addToCartButton2 = document.getElementsByClassName("shop-item-btn");
-	for (var i = 0; i < addToCartButton2.length; i++) {
-		var button = addToCartButton2[i];
-		button.addEventListener("click", addToCartClickeds);
-	}
-
 	document
 		.getElementsByClassName("btn-purchase")[0]
 		.addEventListener("click", purchaseClicked);
 }
-/* Code for the Buy button to make sure it works */
+/* clear out cart after purchase is made */
 function purchaseClicked() {
 	alert("Thank you for your purchase");
 	var cartItems = document.getElementsByClassName("cart-items")[0];
@@ -42,7 +35,7 @@ function purchaseClicked() {
 	}
 	updateCartTotal();
 }
-/*code for to remove an item and the price changing accourding to that */
+/*remove an item and the price changing accourding to that */
 function removeCartItem(event) {
 	var buttonClicked = event.target;
 	buttonClicked.parentElement.parentElement.remove();
@@ -56,7 +49,7 @@ function quantityChanged(event) {
 	}
 	updateCartTotal();
 }
-/*Code for adding items to cart */
+/*add items to cart */
 function addToCartClicked(event) {
 	var button = event.target;
 	var merchItem = button.parentElement.parentElement;
@@ -99,47 +92,6 @@ function addItemToCart(title, price, imageSrc) {
 		.addEventListener("change", quantityChanged);
 }
 
-function addToCartClickeds(event) {
-	var button = event.target;
-	var merchItem = button.parentElement.parentElement;
-	var name = merchItem.getElementsByClassName("merch-item-title")[0].innerText;
-	var cost = merchItem.getElementsByClassName("merch-item-price")[0].innerText;
-	var imgSrc = merchItem.getElementsByClassName("merch-img")[0].src;
-	addItemToCarts(name, cost, imgSrc);
-	updateCartTotal();
-}
-
-function addItemToCarts(name, cost, imgSrc) {
-	var cartRow = document.createElement("div");
-	cartRow.classList.add("cart-row");
-	var cartItems = document.getElementsByClassName("cart-items")[0];
-	var cartItemNames = cartItems.getElementsByClassName("cart-item-title");
-	for (var i = 0; i < cartItemNames.length; i++) {
-		if (cartItemNames[i].innerText == name) {
-			alert("This item is already added to the cart");
-			return;
-		}
-	}
-	var cartRowContents = `
-    <div class="cart-item cart-column">
-		<img class="cart-item-img" src="${imgSrc}" width="120"
-		height="80" />
-		<span class="cart-item-title">${name}</span>
-</div>
-<span class="cart-price cart-column">${cost}</span>
-<div class="cart-quantity cart-column">
-    <input class="cart-quantity-input" type="number" value="1" />
-    <button class="btn btn-danger" type="button">Remove</button>
-</div>`;
-	cartRow.innerHTML = cartRowContents;
-	cartItems.append(cartRow);
-	cartRow
-		.getElementsByClassName("btn-danger")[0]
-		.addEventListener("click", removeCartItem);
-	cartRow
-		.getElementsByClassName("cart-quantity-input")[0]
-		.addEventListener("change", quantityChanged);
-}
 /*Code for the update of price when the quantity goes up or down also changes when you add an item*/
 function updateCartTotal() {
 	var cartItemContainer = document.getElementsByClassName("cart-items")[0];
