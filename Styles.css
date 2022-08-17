@@ -42,7 +42,7 @@ body {
 }
 
 .main-header {
-	background-image: url("images/theredbackbro.jpg");
+	background-image: url("images/common/red-background-header.jpg");
 	background-size: cover;
 	padding-bottom: 10px;
 }
